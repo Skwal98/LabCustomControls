@@ -1,0 +1,7 @@
+<input
+  [(ngModel)]="value"
+  [disabled]="disabled"
+  (focus)="onFocus()"
+  (input)="onInputChange($event)"
+/>
+<span *ngIf="!isValid" style="color: red">Invalid value!</span>

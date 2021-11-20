@@ -1,1 +1,7 @@
-App component started
+<div [formGroup]="formGroup">
+  <app-my-input formControlName="text"></app-my-input>
+</div>
+
+<br />
+<button (click)="toggleControl()">Disable control</button>
+<button (click)="emitValue()">Emit form value</button>
