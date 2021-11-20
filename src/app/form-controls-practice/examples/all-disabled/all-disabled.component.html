@@ -1,0 +1,54 @@
+<div>
+  <div>
+    <span>Form:</span>
+  </div>
+  <code
+    >formGroup: FormGroup = new FormGroup(<br />&emsp;firstName: new
+    FormControl('Alex'), <br />&emsp;lastName: new FormControl('Last'),
+    <br />&emsp;age: new FormControl('25') <br />);</code
+  >
+</div>
+<br />
+<div>
+  <div><span>Form value:</span></div>
+  <code>{{ formValue }}</code>
+</div>
+<br />
+<div>
+  <div><span>Form rawValue:</span></div>
+  <code>{{ formRawValue }}</code>
+</div>
+<br />
+<div>
+  <div><span>Form valid:</span></div>
+  <code>{{ formGroup.valid }}</code>
+</div>
+<br />
+<div>
+  <div><span>Form invalid:</span></div>
+  <code>{{ formGroup.invalid }}</code>
+</div>
+<br />
+<div>
+  <span style="display: block">Form disabled: {{ formGroup.disabled }}</span>
+  <span style="display: block"
+    >firstName control disabled: {{ firstNameControl.disabled }}</span
+  >
+</div>
+<br />
+<div>
+  <button (click)="toggleForm(true)">Enable Form</button>
+  <button (click)="toggleForm(false)">Disable Form</button>
+  <button (click)="toggleFirstName(true)">Enable firstName</button>
+  <button (click)="toggleFirstName(false)">Disable firstName</button>
+  <button (click)="toggleFirstNameOnlySelf(true)">
+    Enable firstName onlySelf
+  </button>
+  <button (click)="toggleFirstNameOnlySelf(false)">
+    Disable firstName onlySelf
+  </button>
+  <button (click)="setValueFirstName()">SetValue firstName</button>
+  <button (click)="setValueFirstNameOnlySelf()">
+    SetValue firstName onlySelf
+  </button>
+</div>
