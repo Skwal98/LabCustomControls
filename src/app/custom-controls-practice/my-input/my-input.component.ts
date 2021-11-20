@@ -37,8 +37,8 @@ export class MyInputComponent extends BaseInput implements OnInit {
 
   //value updated in formsApi
   writeValue(obj: any): void {
+    console.log('invoked write value');
     this.value = obj;
-    console.log('write: ' + obj);
   }
 
   setDisabledState(isDisabled: boolean) {
